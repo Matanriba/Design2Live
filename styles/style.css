@@ -1,0 +1,286 @@
+* {
+    box-sizing: border-box;
+}
+
+/* FONTS */
+
+@font-face {
+    font-family: eurofurenceregular;
+    src: url(/fonts/eurofurenceregular.ttf);
+}
+
+@font-face {
+    font-family: lato-bold;
+    src: url(/fonts/Lato-Bold.ttf);
+}
+
+@font-face {
+    font-family: lato-regular;
+    src: url(/fonts/Lato-Regular.ttf);
+}
+
+/* MAIN */
+
+html {
+    color: #606060;   
+    font-family: lato-regular, sans-serif;
+    line-height: 1.25;
+}
+
+body {
+    margin: 0;
+}
+
+img {
+    width: 100%;
+}
+
+/* LAYOUT */
+
+.logo {
+    font-family: eurofurenceregular;
+    color:white;
+}
+
+.logo :last-child {
+    color: #58c93a;
+}
+
+.main-layout {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* HEADER  */
+
+.main-header {
+    background-color: rgb(41, 41, 41);
+    border: 1px black solid;
+    border-bottom: 6px black solid;
+    margin-bottom: 80px;
+}
+
+.header-container {
+    height: 130px;
+}
+
+.header-container .logo {
+    font-size: 2.5rem;
+    /* letter-spacing: -1px; */
+}
+
+.main-nav {
+    width: 530px;
+    height: 100%;
+}
+
+.main-nav li {
+    color: white;
+    padding-top: 53px ;
+    text-align: center;
+    flex-basis: 25%;
+    cursor: pointer;
+    border-left: 1px solid black;
+}
+
+
+.main-nav li:last-child {
+    border-right: 1px solid black;   
+}
+
+.main-nav a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.main-nav li:hover {
+    color: #58c93a;
+    border-bottom-color: #58c93a;
+}
+
+/* MAIN */
+
+.main-content {
+    gap: 80px;
+    margin-bottom: 80px;
+}
+
+.card {
+    gap: 40px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-image {
+    width: 350px;
+    object-fit: cover;
+    padding-inline-end: 10px;
+    padding-inline-start: 10px;
+}
+
+.card-right {
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-inline-end: 20px;
+    padding-inline-start: 20px;
+}
+
+.card-right .card-title {
+    flex-basis: .35;
+    font-family: lato-bold;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.card-right .card-text {
+    flex-basis: .519;
+}
+
+.card-right .btn-card-continue {
+    height: 40px;
+    width: 186px;
+    border: 2px #c2c2c2 solid;
+    border-radius: 50px;
+    text-align: center;
+    padding: 7px;
+    cursor: pointer;
+}
+
+.card-right .btn-card-continue:hover {
+    width: 210px;
+    border-color: #58c93a;
+    color: #58c93a;
+}
+
+.hide-arrow {
+    visibility: hidden;
+}
+
+.show-arrow {
+    visibility: visible;
+}
+
+/* PAGE-NAV */
+
+.page-nav {
+    height: 80px;
+    padding: 30px;
+}
+
+.paging a{
+    font-size: 1.125rem;
+    color: inherit;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* FOOTER */
+
+.main-footer {
+    height: 315px;
+    background-color: #f8f8f8;
+}
+
+.footer-container {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+    gap:40px;
+}
+
+.footer-container .logo {
+    font-size: 2.5rem;
+    color: black;
+}
+
+.footer-container small a {
+    font-family: lato-bold;
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer-container .social-nav {
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-container .social-nav img {
+    height: 40px;
+}
+
+.footer-container .social-nav img:hover {
+    background-color: black;
+}
+
+
+/* HELPERS */
+
+/* flex helpers */
+
+.flex {
+    display: flex;
+}
+
+.flex.column {
+    flex-direction: column;
+}
+
+.flex.space-between {
+    justify-content: space-between;
+}
+
+.flex.align-center {
+    align-items: center;
+}
+
+
+/* list helpers */
+
+.clean-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* MEDIUM */
+
+@media (min-width: 800px) {
+
+    .main-layout {
+        max-width: 740px;
+    }
+
+    .card {
+        flex-direction: row;
+
+    }
+
+    .card-image {
+        height: 300px;
+        object-fit: cover;
+        padding-inline-end: unset;
+        padding-inline-start: unset;
+    }
+
+    .card-right {
+        padding-inline-end: unset;
+        padding-inline-start: unset;
+    }
+    
+}
+
+/* REGULAR */
+
+@media (min-width: 1020px) {
+    
+    .main-layout {
+        max-width: 980px;
+    }
+
+    .card-image {
+        width: 470px;
+    }
+    
+}
