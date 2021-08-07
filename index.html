@@ -10,9 +10,11 @@
 </head>
 
 <body>
+    <div class="screen" onclick="toggleMenu()"></div>
     <header class="main-header">
         <div class="header-container main-layout flex space-between align-center">
             <div class="logo">Blogin<span>.</span></div>
+            <button class="menu-toggle-btn" onclick="toggleMenu()">☰</button>
             <ul class="main-nav flex clean-list" >
                 <li><a href="#">Journal</a></li>
                 <li><a href="#">About</a></li>
@@ -61,30 +63,6 @@
                     <div class="btn-card-continue" onmouseover="showArrow()" onmouseout="hideArrow()">Continue Reading <span class="hide-arrow"> &#8594;</span></div>
                 </div>
         </section>
-
-
-        <!-- <section class="card flex">
-            <img src="/images/002.jpg" alt="" class="card-image">
-            <h2 class="card-title">Duis aute irure dolor in
-                henderit in voluptate.</h2>
-            <p class="card-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...
-            </p>
-            <button class="btn-card-continue">Continue Reading</button>
-        </section>
-        <section class="card flex">
-            <img src="/images/003.jpg" alt="" class="card-image">
-            <h2 class="card-title">Duis aute irure dolor in
-                henderit in voluptate.</h2>
-            <p class="card-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...
-            </p>
-            <button class="btn-card-continue">Continue Reading</button>
-        </section> -->
     </main>
     <section class="page-nav main-layout">
         <ul class="paging flex space-between clean-list">
@@ -115,6 +93,12 @@
             var arrow = document.querySelector('.btn-card-continue span')
             arrow.classList.remove('show-arrow')
             arrow.classList.add('hide-arrow')
+        }
+
+        function toggleMenu() {
+            document.body.classList.toggle('menu-open');
+            var btn = document.querySelector('.menu-toggle-btn')
+            btn.innerText = (document.body.classList.contains('menu-open')) ? 'X' : '☰'
         }
     </script>
 </body>
